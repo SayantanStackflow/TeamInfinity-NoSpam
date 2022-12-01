@@ -8,7 +8,10 @@ module.exports = {
     extend: {
       fontFamily: {
         Bebas: "Bebas Neue, cursive",
-        Inter: "Inter, sans-serif"  
+        Inter: "Inter, sans-serif",
+        Sarabun: "Sarabun, sans-serif",
+        Poppins: "Poppins, sans-serif",
+        GothicA1: "Gothic A1, sans-serif"
       },
     },
   },

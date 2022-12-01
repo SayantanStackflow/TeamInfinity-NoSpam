@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../static/dist/css/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Poppins&family=Sarabun&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gothic+A1&family=Inter&family=Poppins&family=Sarabun&display=swap" rel="stylesheet">
 <style type="tailwindcss">
 @layer utilities{
   .navitem::after{
@@ -58,6 +58,7 @@
     </div>
    </nav>
 
+
 <!-- Background green rounded box -->
 
   <div class=" relative flex items-center  justify-center lg:pt-5  ">
@@ -70,7 +71,7 @@
     
       <!-- written box -->
 
-      <form action="{{url_for('predict')}}" method="post">
+      <form action="" method="post">
         <div class="md:pt-5 ">
           <div class="form-group flex items-center justify-center lg:mt-3">
             <textarea class="form-control m-0 block w-[90%] h-[70%] rounded-xl border-2 border-solid border-[#00cc76] bg-white bg-clip-padding px-3 py-1.5 text-lg pt-3 pl-4 transition ease-in-out focus:border-[#00CC76] focus:bg-white placeholder:opacity-50  focus:text-[#256D85] focus:outline-none" id="comment" name="comment" rows="10" placeholder="Begin writing your text here"></textarea>
@@ -88,7 +89,27 @@
           </a>
         </div>
       </button>
-      
+
+      <!-- Results of the Prediction -->
+
+      <div class="lg:flex md:flex md:flex-row lg:flex-row flex-none">
+      <div class=" relative lg:ml-14 md:ml-10 flex items-center justify-center lg:pt-4 md:pt-11 pt-5 md:justify-start lg:text-2xl   ">
+        <h3>
+          <a class=" font-Sarabun lg:text-3xl md:text-xl text-[#888383] font-black leading-[47px] uppercase " href="#">your comment is classified as :</a>
+        </h3>
+      </div>
+
+      <div class="detection">
+        
+        <div class=" relative md:ml-2 flex items-center justify-center md:pt-11 lg:pt-4  md:justify-start ">
+            <h3>
+              <a class=" font-Sarabun lg:text-3xl md:text-xl text-[#CC3636] font-black leading-[47px] uppercase " href="#">Spam Comment</a>
+            </h3>
+        </div>
+    </div>
+        
+        
+      </div>
 
     </div>
   </div>
@@ -96,21 +117,21 @@
 <!-- Footer -->
 <div class="footerbar mt-5">
 <div class="bg-[#122D42] ">
-  <div class="flex flex-row items-center justify-between lg:mx-32 md:mx-16 ">
+  <div class="flex flex-row items-center justify-between lg:mx-32 md:mx-16  mx-5">
     <div class="">
       <img class=" w-[109px] my-2" src="../static/dist/images/front logo.png" alt="logo"> 
     </div>
     
-      <div class="footer-col flex flex-row items-center justify-between lg:pl-24 md:pl-24   ">
+      <div class="footer-col lg:flex md:flex hidden flex-row items-center justify-between lg:pl-24 md:pl-24   ">
         <h4 class=" text-[10px] leading-4 font-medium text-[#00AA95] font-Inter hover:text-green-200 transition duration-300" >©2022 NoSpam. | All rights reserved </h4>
       </div>
-    <div class="flex flex-row justify-between space-x-8">
+    <div class="flex flex-row justify-between lg:space-x-8 md:space-x-4 space-x-3">
       <div class="footer-col relative flex justify-center items-center">
           <ul> 
             <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="#">About </a></li>
           </ul>
       </div>
-      <div class="footer-col relative flex justify-center items-center">
+      <div class="footer-col relative lg:flex md:flex hidden justify-center items-center">
           <ul>
             <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="https://github.com/SayantanStackflow/TeamInfinity-NoSpam.">Source Code</a></li>
           </ul>
