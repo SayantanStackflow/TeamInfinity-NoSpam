@@ -5,91 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flowbite Flask</title>
+    <title>NoSpam.</title>
     <link rel="stylesheet" href="../static/dist/css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style type="tailwindcss">
+@layer utilities{
+  .navitem::after{
+@apply content-[''] bg-[#00CC76] h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300
+  }
+  .navitem:hover::after{
+    @apply w-[100%]
+  }
+}
+</style>
 </head>
 
 <body>
-    <!--Pricing-Card -->
-  <div class="relative w-full max-w-[327px] rounded-[10px] bg-white py-[50px] px-[40px]">
-    <!-- Label -->
-    <div class="absolute -top-8 right-4 flex h-[90px] w-[90px] items-center justify-center rounded-full bg-[#e77c40] text-2xl font-bold text-white">New</div>
-    <!-- Card Container -->
-    <div class="flex w-full flex-col items-center justify-center gap-[35px] tracking-[0.2px]">
-      <!-- Title -->
-      <h1 class="text-2xl font-bold text-[#252b42]">FREE</h1>
-      <!-- Subtitle -->
-      <h2 class="w-40 text-center text-base font-bold text-[#737373]">Organize across all apps by hand</h2>
-      <!-- Pricing -->
-      <div class="flex flex-col items-center justify-center">
-        <!-- Price Amount -->
-        <h1 class="text-[40px] font-bold text-[#1855cb]">19$</h1>
-        <!-- Subscription Duration -->
-        <p class="text-base font-bold text-[#8ec2f2]">Per Month</p>
-      </div>
-      <!-- CTA Button -->
-      <button class="w-full rounded-[5px] bg-[#1855cb] py-[15px] px-[40px] text-[14px] font-normal text-white">Try for free</button>
-      <!-- Features -->
-      <div class="flex w-full flex-col items-center justify-center gap-4">
-        <!-- Feature-Item -->
-        <div class="flex w-full items-center justify-start gap-[8px]">
-          <!-- Icon -->
-          <div class="h-[32px] w-[32px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3dbb77" className="w-6 h-6">
-              <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
-            </svg>
-          </div>
-          <!-- Description -->
-          <p class="text-[14px] font-medium text-[#252b42]">Unlimited product updates</p>
+  <nav class="navbarhead bg-white">
+    <div class="mx-auto">
+      <div class="relative flex h-16 px-32 mt-5  items-center justify-center ">
+        <!--logo-->
+        <div>
+          <a href="#" class="flex items-center lg:w-[156px] md:w-30 sm:pt-4">
+          <img src="../static/dist/images/front logo.png "alt="NoSpam" >
+        </a>
         </div>
-        <!-- Feature-Item -->
-        <div class="flex w-full items-center justify-start gap-[8px]">
-          <!-- Icon -->
-          <div class="h-[32px] w-[32px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3dbb77" className="w-6 h-6">
-              <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
-            </svg>
+        	<!-- Primary Navbar items -->
+          <div class="hidden items lg:pt-6 md:flex items-center pl-96 ">
+            <a href="#" class="navitem pl-[35px] text-xl leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">About</a>
+            <a href="#" class="navitem pl-[35px] text-xl leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">Source Code</a>
+            <a href="#" class="navitem px-[35px] text-xl leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">Contact Us</a>
           </div>
-          <!-- Description -->
-          <p class="text-[14px] font-medium text-[#252b42]">Unlimited product updates</p>
-        </div>
-        <!-- Feature-Item -->
-        <div class="flex w-full items-center justify-start gap-[8px]">
-          <!-- Icon -->
-          <div class="h-[32px] w-[32px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#3dbb77" className="w-6 h-6">
-              <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
-            </svg>
-          </div>
-          <!-- Description -->
-          <p class="text-[14px] font-medium text-[#252b42]">Unlimited product updates</p>
-        </div>
-        <!-- Feature-Item -->
-        <div class="flex w-full items-center justify-start gap-[8px]">
-          <!-- Icon -->
-          <div class="h-[32px] w-[32px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#bdbdbd" className="w-6 h-6">
-              <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
-            </svg>
-          </div>
-          <!-- Description -->
-          <p class="text-[14px] font-medium text-[#252b42]">1GB Cloud Storage</p>
-        </div>
-        <!-- Feature-Item -->
-        <div class="flex w-full items-center justify-start gap-[8px]">
-          <!-- Icon -->
-          <div class="h-[32px] w-[32px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#bdbdbd" className="w-6 h-6">
-              <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
-            </svg>
-          </div>
-          <!-- Description -->
-          <p class="text-[14px] font-medium text-[#252b42]">Email and community support</p>
-        </div>
+          <!-- logout button --> 
+          <div class="hidden md:flex items-center space-x-5 pt-[22px] ">
+            <button class=" bg-[#256D85] rounded-3xl  py-[8px] px-[8px] hover:bg-green-400 transition duration-300 "> 
+              <div class="justify-center pl-7">
+                <div class=" grid grid-cols-2 ">
+                  <a href="#" class=" text-xl leading-6 space-x-10 font-Bebas font-medium text-white">Log Out</a>
+                
+                  <img src="../static/dist/images/logout (1).png" class=" w-5 justify-center pt-[2px] pl-[4px] " alt="logout">
+            </div>
+            </button>
       </div>
     </div>
-  </div>
-
+   </nav>
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 

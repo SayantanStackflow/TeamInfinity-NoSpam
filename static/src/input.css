@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navitem::after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    
+    height: 2px;
+    left: 40%;
+    position: absolute;
+    background: #00CC76;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.items{
+    position: relative;
+}
+.navitem:hover::after{
+    width: 65%; 
+    left: 18%; 
+}
+.navitem{
+  display: inline-block;
+  padding: 1px 20px;
+  position: relative;
+}
+
