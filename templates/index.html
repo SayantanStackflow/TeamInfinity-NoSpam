@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../static/dist/css/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap" rel="stylesheet">
 <style type="tailwindcss">
 @layer utilities{
   .navitem::after{
@@ -23,12 +23,15 @@
 </head>
 
 <body>
+
+<!-- Navbar -->
+
   <nav class="navbarhead bg-white">
     <div class="mx-auto">
-      <div class="relative flex h-16 px-32 mt-5  items-center justify-center ">
+      <div class="flex flex-row items-center justify-between mx-32 ">
         <!--logo-->
         <div>
-          <a href="#" class="flex items-center lg:w-[156px] md:w-30 sm:pt-4">
+          <a href="#" class="flex lg:w-[156px] md:w-[82px]  sm:pt-4">
           <img src="../static/dist/images/front logo.png "alt="NoSpam" >
         </a>
         </div>
@@ -51,6 +54,46 @@
       </div>
     </div>
    </nav>
+
+<!-- Background green rounded box -->
+
+  <div class=" relative flex items-center  justify-center  ">
+    <div class="lg:mx-[127px] md:mx-16  w-[100%] h-[80vh] mt-3 rounded-lg bg-[#80FFDB]">
+      
+    </div>
+  </div>
+
+<!-- Footer -->
+<div class="footerbar mt-5">
+<div class="bg-[#122D42] ">
+  <div class="flex flex-row items-center justify-between lg:mx-32 md:mx-16 ">
+    <div class="">
+      <img class=" w-[109px] my-2" src="../static/dist/images/front logo.png" alt="logo"> 
+    </div>
+    
+      <div class="footer-col flex flex-row items-center justify-between lg:pl-24 md:pl-24   ">
+        <h4 class=" text-[10px] leading-4 font-medium text-[#00AA95] font-Inter hover:text-green-200 transition duration-300" >©2022 NoSpam. | All rights reserved </h4>
+      </div>
+    <div class="flex flex-row justify-between space-x-8">
+      <div class="footer-col relative flex justify-center items-center">
+          <ul> 
+            <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="#">About </a></li>
+          </ul>
+      </div>
+      <div class="footer-col relative flex justify-center items-center">
+          <ul>
+            <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="#">Source Code</a></li>
+          </ul>
+      </div>
+      <div class="footer-col relative flex justify-center items-center">
+          <ul>
+            <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="#">Help Desk</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+  
+</div>
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 

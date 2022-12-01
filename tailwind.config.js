@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       fontFamily: {
         Bebas: "Bebas Neue, cursive",
-      }
+        Inter: "Inter, sans-serif"  
+      },
     },
   },
   plugins: [

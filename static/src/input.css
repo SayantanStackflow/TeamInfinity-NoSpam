@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    min-height: 100vh;
+}
 .navitem::after{
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -19,8 +22,8 @@
     position: relative;
 }
 .navitem:hover::after{
-    width: 65%; 
-    left: 18%; 
+    width: 67%; 
+    left: 16%; 
 }
 .navitem{
   display: inline-block;
@@ -28,3 +31,7 @@
   position: relative;
 }
 
+.footerbar{
+    position: sticky;
+    top: 100%;
+}
