@@ -28,24 +28,24 @@
 
   <nav class="navbarhead bg-white">
     <div class="mx-auto">
-      <div class="flex flex-row lg:items-center lg:justify-between mx-32 ">
+      <div class="flex flex-row lg:items-center lg:justify-between lg:mx-32 md:mx-16 ">
         <!--logo-->
         <div>
-          <a href="#" class="flex lg:w-[156px] md:w-40 w-[82px] lg:pt-5">
+          <a href="#" class="flex lg:w-[156px] md:w-36 md:pt-3 w-24 lg:pt-5">
           <img src="../static/dist/images/front logo.png "alt="NoSpam" >
         </a>
         </div>
         	<!-- Primary Navbar items -->
-          <div class="hidden items lg:pt-6 md:flex items-center pl-96 ">
-            <a href="#" class="navitem pl-[35px] text-xl leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">About</a>
-            <a href="https://github.com/SayantanStackflow/TeamInfinity-NoSpam." class="navitem pl-[35px] text-xl leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">Source Code</a>
-            <a href="#" class="navitem px-[35px] text-xl leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">Contact Us</a>
+          <div class="hidden items lg:pt-6 md:flex items-center md:items-end lg:pl-96 md:pl-36 ">
+            <a href="#" class="navitem pl-[35px] lg:text-xl text-base leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">About</a>
+            <a href="https://github.com/SayantanStackflow/TeamInfinity-NoSpam." class="navitem pl-[35px] lg:text-xl text-base leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">Source Code</a>
+            <a href="#" class="navitem lg:px-[35px] md:px-3 lg:text-xl text-base leading-6 text-[#00AA95] font-Bebas hover:text-green-500 transition duration-300 relative">Contact Us</a>
           
             <div class="hidden md:flex items-center space-x-5 ">
               <button class=" bg-[#256D85] rounded-3xl  py-[8px] px-[8px] hover:bg-green-400 transition duration-300 "> 
                 <div class="justify-center pl-7">
                   <div class=" grid grid-cols-2 ">
-                    <a href="#" class=" text-xl leading-6 space-x-10 font-Bebas font-medium text-white">Log Out</a>
+                    <a href="#" class=" lg:text-xl text-lg leading-6 space-x-10 font-Bebas font-medium text-white">Log Out</a>
                   
                     <img src="../static/dist/images/logout (1).png" class=" w-5 justify-center pt-[2px] pl-[4px] " alt="logout">
               </div>
@@ -60,7 +60,7 @@
 
 <!-- Background green rounded box -->
 
-  <div class=" relative flex items-center  justify-center lg:pt-5  ">
+  <div class=" relative flex items-center  justify-center lg:pt-5 pt-4  ">
     <div class="lg:mx-[127px] md:mx-16 mx-5 w-[100%] h-[80vh] mt-3 rounded-lg bg-[#80FFDB]">
       <div class=" relative lg:ml-16 md:ml-10 flex items-center justify-center md:pt-11 pt-5 md:justify-start ">
         <h3>
@@ -70,7 +70,7 @@
     
       <!-- written box -->
 
-      <form action="{{url_for('predict')}}" method="post">
+      <form action="{{ url_for('predict')}}" method="post">
         <div class="md:pt-5 ">
           <div class="form-group flex items-center justify-center lg:mt-3">
             <textarea class="form-control m-0 block w-[90%] h-[70%] rounded-xl border-2 border-solid border-[#00cc76] bg-white bg-clip-padding px-3 py-1.5 text-lg pt-3 pl-4 transition ease-in-out focus:border-[#00CC76] focus:bg-white placeholder:opacity-50  focus:text-[#256D85] focus:outline-none" id="comment" name="comment" rows="10" placeholder="Begin writing your text here"></textarea>
@@ -81,8 +81,8 @@
       <!-- Predict Button -->
 
       <button type="submit">
-        <div class="pl-5 pt-4 md:pl-[40px] lg:pt-[31px] lg:pl-14">
-          <a href="#_" class="group relative overflow-hidden rounded-lg bg-green-500 px-[30px] py-[5px] text-sm font-medium text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 hover:ring-2 hover:ring-green-400 hover:ring-offset-2 md:px-[50px] md:py-[7px] lg:px-[70px] lg:py-[8px]">
+        <div class="pl-5 pt-4 md:pl-[40px] lg:pt-[31px]  lg:pl-14">
+          <a href="#" class="group relative overflow-hidden  rounded-lg bg-green-500 px-[30px] py-[5px] text-sm font-medium text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 hover:ring-2 hover:ring-green-400 hover:ring-offset-2 md:px-[50px] md:py-[7px] lg:px-[70px] lg:py-[8px]">
             <span class="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 group-hover:-translate-x-40"></span>
             <span class="relative">Predict</span>
           </a>
@@ -95,34 +95,34 @@
 
 <!-- Footer -->
 <div class="footerbar mt-5">
-<div class="bg-[#122D42] ">
-  <div class="flex flex-row items-center justify-between lg:mx-32 md:mx-16 ">
-    <div class="">
-      <img class=" w-[109px] my-2" src="../static/dist/images/front logo.png" alt="logo"> 
+  <div class="bg-[#122D42] ">
+    <div class="flex flex-row items-center justify-between lg:mx-32 md:mx-16  mx-5">
+      <div class="">
+        <img class=" w-[109px] my-2" src="../static/dist/images/front logo.png" alt="logo"> 
+      </div>
+      
+        <div class="footer-col lg:flex md:flex hidden flex-row items-center justify-between lg:pl-24 md:pl-24   ">
+          <h4 class=" text-[10px] leading-4 font-medium text-[#00AA95] font-Inter hover:text-green-200 transition duration-300" >©2022 NoSpam. | All rights reserved </h4>
+        </div>
+      <div class="flex flex-row justify-between lg:space-x-8 md:space-x-4 space-x-3">
+        <div class="footer-col relative flex justify-center items-center">
+            <ul> 
+              <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="#">About </a></li>
+            </ul>
+        </div>
+        <div class="footer-col relative lg:flex md:flex hidden justify-center items-center">
+            <ul>
+              <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="https://github.com/SayantanStackflow/TeamInfinity-NoSpam.">Source Code</a></li>
+            </ul>
+        </div>
+        <div class="footer-col relative flex justify-center items-center">
+            <ul>
+              <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="#">Help Desk</a></li>
+            </ul>
+        </div>
     </div>
-    
-      <div class="footer-col flex flex-row items-center justify-between lg:pl-24 md:pl-24   ">
-        <h4 class=" text-[10px] leading-4 font-medium text-[#00AA95] font-Inter hover:text-green-200 transition duration-300" >©2022 NoSpam. | All rights reserved </h4>
-      </div>
-    <div class="flex flex-row justify-between space-x-8">
-      <div class="footer-col relative flex justify-center items-center">
-          <ul> 
-            <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="#">About </a></li>
-          </ul>
-      </div>
-      <div class="footer-col relative flex justify-center items-center">
-          <ul>
-            <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="https://github.com/SayantanStackflow/TeamInfinity-NoSpam.">Source Code</a></li>
-          </ul>
-      </div>
-      <div class="footer-col relative flex justify-center items-center">
-          <ul>
-            <li> <a class="text-[10px] leading-8 font-medium text-[#256D85] hover:text-green-700 transition duration-300" href="#">Help Desk</a></li>
-          </ul>
-      </div>
   </div>
-</div>
-  
+    
 </div>
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>

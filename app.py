@@ -7,32 +7,44 @@ from sklearn.model_selection import train_test_split
  
 app = Flask(__name__)
 
-@app.route("/")
-@app.route("/index")
+@app.route('/')
+
 def index():
-	return render_template("index.html")
+	return render_template('index.html')
 
 
-@app.route('/predict', methods=['post'] )
+@app.route('/predict', methods=['POST'] )
+
 def predict():
-	data_frame= pd.read_csv('CommentsData.csv')
-	df_data= data_frame[["Comment", "Spam"]]
-	df_x= df_data['Comment']
-	df_y= df_data.Spam
+	data_frame= pd.read_csv("YoutubeSpamMergedData.csv")
+
+	df_data= data_frame[["DATE", "CONTENT"]]
+
+	df_x= df_data['DATE']
+	df_y= df_data.CONTENT
+
+
 	compus= df_x
-	cv=CountVectorizer()
+	cv= CountVectorizer()
+
+
 	X= cv.fit_transform(compus)
-	X_train, X_test, y_train, y_test= train_test_split(X, df_y, test_size= 0.33, random_state=44)
+
+
+	X_train, X_test, y_train, y_test = train_test_split(X, df_y, test_size=0.33, random_state=42)
+
+	#classification Naive Bayes
+
+
 	clf= MultinomialNB()
-	clf.fit(X_train, y_train)
-	clf.score(X_test, y_test)
+	clf.fit(X_train, y_train )
+	#clf.score(X_test, y_test)
 
-
-	if request.method== 'post':
-		comment= request.form['comment']
-		data= [comment]
-		vector= cv.transform(data).toarray()
-		my_prediction= clf.predict(vector)
+	if request.method== 'POST':
+		comment = request.form['comment']
+		data = [comment]
+		vect = cv.transform(data).toarray()
+		my_prediction = clf.predict(vect)
 
 	return render_template('result.html', prediction= my_prediction) 
 
