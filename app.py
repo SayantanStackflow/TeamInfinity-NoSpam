@@ -18,35 +18,29 @@ def index():
 def predict():
 	data_frame= pd.read_csv("YoutubeSpamMergedData.csv")
 
-	df_data= data_frame[["DATE", "CONTENT"]]
+	df_data= data_frame[["CONTENT", "CLASS"]]
 
-	df_x= df_data['DATE']
-	df_y= df_data.CONTENT
-
-
-	compus= df_x
-	cv= CountVectorizer()
-
-
-	X= cv.fit_transform(compus)
-
+	df_x= df_data['CONTENT']
+	df_y= df_data.CLASS
+	corpus = df_x
+	cv = CountVectorizer()
+	X = cv.fit_transform(corpus)  # Fit the Data
 
 	X_train, X_test, y_train, y_test = train_test_split(X, df_y, test_size=0.33, random_state=42)
+	# Naive Bayes Classifier
 
-	#classification Naive Bayes
-
-
-	clf= MultinomialNB()
-	clf.fit(X_train, y_train )
+	clf = MultinomialNB()
+	clf.fit(X_train, y_train)
 	#clf.score(X_test, y_test)
 
-	if request.method== 'POST':
+
+	if request.method == 'POST':
 		comment = request.form['comment']
 		data = [comment]
 		vect = cv.transform(data).toarray()
 		my_prediction = clf.predict(vect)
+	return render_template('result.html', prediction=my_prediction)
 
-	return render_template('result.html', prediction= my_prediction) 
 
 
 if __name__ == '__main__':

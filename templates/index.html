@@ -71,26 +71,24 @@
     
       <!-- written box -->
 
-      <form action="{{ url_for('predict')}}" method="post">
+      <form action="{{ url_for('predict')}}" method="POST">
         <div class="md:pt-5 ">
           <div class="form-group flex items-center justify-center lg:mt-3">
             <textarea class="form-control m-0 block w-[90%] h-[70%] rounded-xl border-2 border-solid border-[#00cc76] bg-white bg-clip-padding px-3 py-1.5 text-lg pt-3 pl-4 transition ease-in-out focus:border-[#00CC76] focus:bg-white placeholder:opacity-50  focus:text-[#256D85] focus:outline-none" id="comment" name="comment" rows="10" placeholder="Begin writing your text here"></textarea>
           </div>
         </div>
+
+         <!-- Predict Button -->
+        <button type="submit">
+          <div class="pl-5 pt-4 md:pl-[40px] lg:pt-[31px]  lg:pl-14">
+            <a href="#" class="group relative overflow-hidden  rounded-lg bg-green-500 px-[30px] py-[5px] text-sm font-medium text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 hover:ring-2 hover:ring-green-400 hover:ring-offset-2 md:px-[50px] md:py-[7px] lg:px-[70px] lg:py-[8px]">
+              <span class="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 group-hover:-translate-x-40"></span>
+              <span class="relative">Predict</span>
+            </a>
+          </div>
+        </button>
+        
       </form>
-
-      <!-- Predict Button -->
-
-      <button type="submit">
-        <div class="pl-5 pt-4 md:pl-[40px] lg:pt-[31px]  lg:pl-14">
-          <a href="#" class="group relative overflow-hidden  rounded-lg bg-green-500 px-[30px] py-[5px] text-sm font-medium text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 hover:ring-2 hover:ring-green-400 hover:ring-offset-2 md:px-[50px] md:py-[7px] lg:px-[70px] lg:py-[8px]">
-            <span class="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-1000 group-hover:-translate-x-40"></span>
-            <span class="relative">Predict</span>
-          </a>
-        </div>
-      </button>
-      
-
     </div>
   </div>
 
