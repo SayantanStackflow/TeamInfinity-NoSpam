@@ -12,25 +12,27 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-
 @app.route('/predict', methods=['POST'] )
 
 def predict():
 	data_frame= pd.read_csv("YoutubeSpamMergedData.csv")
 
+
+
 	df_data= data_frame[["CONTENT", "CLASS"]]
+
+
 
 	df_x= df_data['CONTENT']
 	df_y= df_data.CLASS
 	corpus = df_x
 	cv = CountVectorizer()
-	X = cv.fit_transform(corpus)  # Fit the Data
-
+	X = cv.fit_transform(corpus) 
 	X_train, X_test, y_train, y_test = train_test_split(X, df_y, test_size=0.33, random_state=42)
-	# Naive Bayes Classifier
 
 	clf = MultinomialNB()
 	clf.fit(X_train, y_train)
+
 	#clf.score(X_test, y_test)
 
 
@@ -40,6 +42,8 @@ def predict():
 		vect = cv.transform(data).toarray()
 		my_prediction = clf.predict(vect)
 	return render_template('result.html', prediction=my_prediction)
+
+
 
 
 
